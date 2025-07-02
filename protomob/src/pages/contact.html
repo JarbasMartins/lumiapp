@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+
+        <title>Aplicativo Lumi</title>
+        <link rel="stylesheet" href="/src/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="content">
+            <header>
+                <div class="user-info">
+                    <span>Contatos</span>
+                </div>
+                <button class="prev-page glass">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </header>
+
+            <div class="contacts-container">
+                <section class="default-contacts">
+                    <h2>Contatos Padrões</h2>
+                    <div class="contact-card">
+                        <div>
+                            <strong>Polícia Militar</strong>
+                            <p>190</p>
+                        </div>
+                        <a class="call-button">Ligar</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div>
+                            <strong>Central de Atendimento à Mulher</strong>
+                            <p>180</p>
+                        </div>
+                        <a class="call-button">Ligar</a>
+                    </div>
+                </section>
+
+                <section class="trusted-contacts">
+                    <h2>Contatos de Confiança</h2>
+                    <div class="contact-list" id="trustedContacts">
+                        <!-- contatos adicionados aparecem aqui -->
+                    </div>
+                    <form id="addContactForm" class="add-contact-form">
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Nome"
+                            required
+                        />
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            placeholder="Telefone"
+                            required
+                        />
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>

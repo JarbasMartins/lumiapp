@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teste de Risco | Lumi</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <section class="content">
+            <main class="risk-test-container">
+                <header>
+                    <button class="prev-page glass">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <h2>Teste de Risco</h2>
+                </header>
+                <form id="riskTestForm">
+                    <div class="question">
+                        <label>1. Você sente que está em risco iminente?</label>
+                        <select name="q1" required>
+                            <option value="">Selecione...</option>
+                            <option value="2">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                        <label
+                            >2. Seu agressor tem acesso ao seu telefone?</label
+                        >
+                        <select name="q2" required>
+                            <option value="">Selecione...</option>
+                            <option value="2">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                        <label>3. Há histórico de violência física?</label>
+                        <select name="q3" required>
+                            <option value="">Selecione...</option>
+                            <option value="3">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                        <label>4. Você já acionou autoridades antes?</label>
+                        <select name="q4" required>
+                            <option value="">Selecione...</option>
+                            <option value="2">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                        <label>5. Qual o seu nível de medo atual?</label>
+                        <select name="q5" required>
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Tranquila</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 - Muito assustada</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-test">Avaliar</button>
+                </form>
+
+                <div id="riskResult" class="risk-result" style="display: none">
+                    <p id="riskLevel"></p>
+                </div>
+            </main>
+        </section>
+
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>
