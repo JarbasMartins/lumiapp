@@ -60,7 +60,7 @@ export function screensNavigation() {
     if (riskTestBtn) {
         riskTestBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "/src/pages/riskTest.html";
+            window.location.href = "/risktest.html";
         });
     }
 
@@ -69,7 +69,7 @@ export function screensNavigation() {
     if (contactBtn) {
         contactBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "/src/pages/contact.html";
+            window.location.href = "/contact.html";
         });
     }
 
@@ -78,7 +78,7 @@ export function screensNavigation() {
     if (infoBtn) {
         infoBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "/src/pages/information.html";
+            window.location.href = "/information.html";
         });
     }
 }

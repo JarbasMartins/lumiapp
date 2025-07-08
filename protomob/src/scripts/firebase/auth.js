@@ -53,7 +53,7 @@ const handleRegister = async (e, form) => {
         );
         await updateProfile(userCredential.user, { displayName: firstName });
         form.reset();
-        redirectTo("index.html");
+        redirectTo("/index.html");
     } catch (err) {
         console.error("Erro ao cadastrar:", err.message);
     } finally {
@@ -74,7 +74,7 @@ const handleLogin = async (e, form) => {
     try {
         await signInWithEmailAndPassword(auth, email, password);
         form.reset();
-        redirectTo("index.html");
+        redirectTo("/index.html");
     } catch (err) {
         console.error("Erro ao fazer login:", err.message);
     } finally {
@@ -87,13 +87,13 @@ const handleLogin = async (e, form) => {
 const handleLogout = async () => {
     try {
         await signOut(auth);
-        redirectTo("src/pages/auth.html");
+        redirectTo("/auth.html");
     } catch (err) {
         console.error("Erro ao fazer logout:", err.message);
     }
 };
 
-// update de estado do usuario
+// upadete de estado do usuario
 const handleAuthStateChange = (user) => {
     const showName = document.querySelector(".show-name");
 
@@ -101,10 +101,12 @@ const handleAuthStateChange = (user) => {
         if (showName) showName.textContent = user.displayName;
     } else {
         if (window.location.pathname.endsWith("index.html")) {
-            redirectTo("src/pages/auth.html");
+            redirectTo("/auth.html");
         }
     }
 };
+
+// export { auth, handleRegister, handleLogin, handleLogout, handleAuthStateChange };
 
 export function initAuth() {
     const registerForm = document.querySelector(".register form");
