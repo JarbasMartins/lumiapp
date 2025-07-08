@@ -31,7 +31,7 @@ export function initNavigation() {
 
     if (startButton) {
         startButton.addEventListener("click", () => {
-            window.location.href = "./auth.html";
+            window.location.href = "/auth.html";
         });
     }
 }

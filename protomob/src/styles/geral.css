@@ -194,11 +194,16 @@ button.glass {
     display: none;
 }
 
+.auth.register p:first-of-type {
+    color: var(--color-light);
+    font-weight: 400;
+    align-self: center;
+}
+
 .auth h2 {
     font-size: var(--font-size-xxl);
     align-self: center;
     color: var(--color-light);
-    margin-bottom: var(--gap-md);
 }
 
 .auth form {
