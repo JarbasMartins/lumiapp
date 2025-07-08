@@ -87,7 +87,7 @@ const handleLogin = async (e, form) => {
 const handleLogout = async () => {
     try {
         await signOut(auth);
-        redirectTo("/auth.html");
+        redirectTo("./src/pages/auth.html");
     } catch (err) {
         console.error("Erro ao fazer logout:", err.message);
     }
@@ -101,7 +101,7 @@ const handleAuthStateChange = (user) => {
         if (showName) showName.textContent = user.displayName;
     } else {
         if (window.location.pathname.endsWith("index.html")) {
-            redirectTo("/auth.html");
+            redirectTo("./src/pages/auth.html");
         }
     }
 };

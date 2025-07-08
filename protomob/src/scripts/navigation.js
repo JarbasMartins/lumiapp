@@ -31,7 +31,7 @@ export function initNavigation() {
 
     if (startButton) {
         startButton.addEventListener("click", () => {
-            window.location.href = "/auth.html";
+            window.location.href = "./auth.html";
         });
     }
 }
@@ -60,7 +60,7 @@ export function screensNavigation() {
     if (riskTestBtn) {
         riskTestBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "/risktest.html";
+            window.location.href = "/src/pages/riskTest.html";
         });
     }
 
@@ -69,7 +69,7 @@ export function screensNavigation() {
     if (contactBtn) {
         contactBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "/contact.html";
+            window.location.href = "/src/pages/contact.html";
         });
     }
 
@@ -78,7 +78,7 @@ export function screensNavigation() {
     if (infoBtn) {
         infoBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = "/information.html";
+            window.location.href = "/src/pages/information.html";
         });
     }
 }
